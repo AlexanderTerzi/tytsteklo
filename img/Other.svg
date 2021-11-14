@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="16" viewBox="0 0 60 16">
+  <g id="Иллюстрация" transform="translate(-890.597 -457.636)">
+    <g id="Эллипс_22" data-name="Эллипс 22" transform="translate(890.597 457.636)" fill="#fff" stroke="#707070" stroke-width="2">
+      <circle cx="8" cy="8" r="8" stroke="none"/>
+      <circle cx="8" cy="8" r="7" fill="none"/>
+    </g>
+    <g id="Эллипс_23" data-name="Эллипс 23" transform="translate(912.597 457.636)" fill="#fff" stroke="#707070" stroke-width="2">
+      <circle cx="8" cy="8" r="8" stroke="none"/>
+      <circle cx="8" cy="8" r="7" fill="none"/>
+    </g>
+    <g id="Эллипс_24" data-name="Эллипс 24" transform="translate(935.597 457.636)" fill="#fff" stroke="#707070" stroke-width="2">
+      <ellipse cx="7.5" cy="8" rx="7.5" ry="8" stroke="none"/>
+      <ellipse cx="7.5" cy="8" rx="6.5" ry="7" fill="none"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,1841 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Тут стекло</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="#">
+	<meta name="keywords" content="">
+	<link rel="icon" href="img/favicon.png" type="image/x-icon">
+ 	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+ 	<meta property="og:title" content="">
+ 	<meta property="og:description" content="">
+ 	<meta property="og:type" content="article">
+ 	<meta property="og:image" content="#">
+ 	<meta property="og:site_name" content="">
+ 	<!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet"> -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Arctic Modal -->
+	<link rel="stylesheet" href="css/jquery.arcticmodal-0.3.css">
+	<!-- Animate CSS -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="css/fontawesome-all.min.css">
+	<!-- Tooltip -->
+	<link rel="stylesheet" href="css/baloon.css">
+	<!-- Main CSS -->
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div id="page-preloader">
+		<span class="spinner">
+			<div id="preloader">
+  				<div class="loader">Загрузка...</div>
+			</div>
+		</span>
+	</div>
+	<section class="calculator-section">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="calculator-wrap">
+						<div class="calculator">
+							<div class="calculator-head">
+								<a href="contacts.html" class="btn calculator__relocation animated wow fadeInLeft">
+									Контакты
+								</a>
+								<a href="index.html" class="header-logo">
+									<span class="header-logo__one animated wow bounceInDown">
+										<img src="img/logo-one.png" alt="Тут стекло">
+									</span>
+									<span class="header-logo__two animated wow swing">
+										<img src="img/logo-two.png" alt="Сервис расчёта">
+									</span>
+								</a>
+							</div>
+							<h1 class="calculator-title">
+								Калькулятор <span class="calculator-subtitle">стекла</span>
+							</h1>
+							<form class="form animated wow fadeInUp">
+								<h2 class="form__subtitle form__subtitle_products" aria-label="Выбирайте" data-balloon-pos="up">
+									Изделие
+								</h1>
+								<div class="form-radio animated wow fadeInUp">
+									<div class="form-radio__item">
+										<label for="glass" class="active" id="glass-label">
+											<img src="img/Glass.svg" alt="glass">
+											<span>стекло/<br>нарезка</span>
+										</label>
+										<input type="radio" id="glass" checked name="form-radio__item">
+									</div>
+									<div class="form-radio__item">
+										<label for="mirror" id="mirror-label">
+											<img src="img/Mirror.svg" alt="mirror">
+											<span>Зеркала</span>
+										</label>
+										<input type="radio" id="mirror" name="form-radio__item">
+									</div>
+									<div class="form-radio__item">
+										<label for="skinali" id="skinali-label">
+											<img src="img/panels.png" alt="skinali">
+											<span>скинали/<br>панели</span>
+										</label>
+										<input type="radio" id="skinali" name="form-radio__item">
+									</div>
+									<div id="more-btn">
+										<span>
+											Показать больше
+										</span>
+										<img src="img/arrow-down.png" alt="arrow">
+									</div>
+								</div>
+								<div class="form-radio form-radio_hide">
+									<div class="form-radio__item">
+										<label for="door" id="door-label">
+											<img src="img/door.png" alt="door">
+											<span>перегородка/<br>душевая</span>
+										</label>
+										<input type="radio" id="door" name="form-radio__item">
+									</div>
+									<div class="form-radio__item">
+										<label for="figure" id="figure-label">
+											<img src="img/figure.png" alt="figure">
+											<span>нестандартно/<br>фигурные</span>
+										</label>
+										<input type="radio" id="figure" name="form-radio__item">
+									</div>
+								</div>
+							</form>
+							<div class="calculator-common-wrapper animated wow fadeInUp">
+
+								<!----------------------- Glass calculator ------------------------->
+								<div id="calculator-glass" class="calculator-common">
+									<form id="calculator-glass-form">
+										<input type="radio" id="glass_hide" checked name="form-radio__item_hide" class="form-radio__item_hide">
+										<div class="calculator-glass-sizes calculator-sizes holes">
+											<div class="calculator-glass-size calculator-size hole" aria-label="Напишите ширину изделия #1" data-balloon-pos="up">
+												<span>
+													Ширина, <br>мм &nbsp;<i class="fas fa-arrows-alt-h"></i>
+												</span>
+												<input type="number" value="1000" min="200" max="3500" id="glass-width_one">
+											</div>
+											<div class="calculator-glass-size calculator-size hole" aria-label="Напишите высоту изделия #1" data-balloon-pos="up">
+												<span>
+													Высота, <br>мм &nbsp;<i class="fas fa-arrows-alt-v"></i>
+												</span>
+												<input type="number" value="1000" min="200" max="5000" id="glass-height_one">
+											</div>
+											<div class="calculator-glass-size calculator-size hole hole_last" aria-label="Напишите толщину изделия #1" data-balloon-pos="up">
+												<span>
+													Толщина, <br>мм &nbsp;<i class="far fa-arrow-to-left"></i>
+												</span>
+												<select name="glass-depth_one" id="glass-depth_one" class="depth-select depth-select_one">
+													<option value="4">4</option>
+													<option value="5">5</option>
+													<option value="6">6</option>
+													<option value="8">8</option>
+													<option value="10">10</option>
+													<option value="12">12</option>
+												</select>
+											</div>
+										</div>
+										<div class="calculator-glass-types types">
+											<h2 class="form__subtitle">
+												Тип стекла
+											</h1>
+											<div class="calculator-glass-types__subtitle calculator-glass-types__subtitle_first form-block">
+												<span class="first">Обычное</span>&nbsp;|&nbsp;<span class="second">Сырое</span>
+												<img src="img/arrow-down.png" alt="arrow-down.png">
+											</div>
+											<div class="calculator-glass-types__content calculator-glass-types__content_first">
+												<div class="calculator-glass-types__block calculator-glass-types__block_first calculator-glass-types__block_first_first form-subblock subblock-line">
+													<span>
+														<input type="radio" id="glass-type-regular" name="calculator-glass-types-first" class="glass-type-first_one" value="regular" checked>
+														<label for="glass-type-regular">Обычное</label>
+														<button class="modal-tooltip__type modal-tooltip">
+															<i class="fas fa-question-circle"></i>
+														</button>
+													</span>
+													<span>
+														<input type="radio" id="glass-type-light" name="calculator-glass-types-first" class="glass-type-first_one" value="light">
+														<label for="glass-type-light">Просветленное</label>
+														<button class="modal-tooltip__type modal-tooltip">
+															<i class="fas fa-question-circle"></i>
+														</button>
+													</span>
+												</div>
+												<div class="calculator-glass-types__block calculator-glass-types__block_second_first form-subblock">
+													<span>
+														<input type="radio" id="glass-type-raw" name="calculator-glass-types-second" class="glass-type-second_one" value="raw" checked>
+														<label for="glass-type-raw">Сырое</label>
+														<button class="modal-tooltip modal-tooltip__type_raw">
+															<i class="fas fa-question-circle"></i>
+														</button>
+													</span>
+													<span>
+														<input type="radio" id="glass-type-tempered" name="calculator-glass-types-second" class="glass-type-second_one" value="tempered">
+														<label for="glass-type-tempered">Закаленное</label>
+														<button class="modal-tooltip modal-tooltip__type_tempered">
+															<i class="fas fa-question-circle"></i>
+														</button>
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="calculator-glass-edge calculator-edge">
+											<h2 class="form__subtitle">
+												Кромка:
+											</h2>
+											<div class="calculator-glass-edge__subtitle calculator-glass-edge__subtitle_one calculator-edge__subtitle form-block">
+												<span class="first">Не обработанная</span>
+												<img src="img/arrow-down.png" alt="arrow-down.png">
+											</div>
+											<div class="calculator-glass-edge__content calculator-glass-edge__content_one calculator-edge__content calculator-edge__subtitle form-subblock">
+												<span>
+													<input type="radio" id="glass-edge-raw_one" name="calculator-glass-edge_one" class="glass-edge_one" value="0" checked>
+													<label for="glass-edge-raw_one">Не обработанная</label>
+													<button class="modal-tooltip__edge_raw modal-tooltip modal-tooltip_edge">
+														<i class="fas fa-question-circle"></i>
+													</button>
+												</span>
+												<span>
+													<input type="radio" id="glass-edge-polished_one" name="calculator-glass-edge_one" class="glass-edge_one" value="150">
+													<label for="glass-edge-polished_one">Шлифованная</label>
+													<button class="modal-tooltip__edge_polished modal-tooltip modal-tooltip_edge">
+														<i class="fas fa-question-circle"></i>
+													</button>
+												</span>
+												<span>
+													<input type="radio" id="glass-edge-bright_one" name="calculator-glass-edge_one" class="glass-edge_one" value="250">
+													<label for="glass-edge-bright_one">Полированная</label>
+													<button class="modal-tooltip__edge_bright modal-tooltip modal-tooltip_edge">
+														<i class="fas fa-question-circle"></i>
+													</button>
+												</span>
+											</div>
+										</div>
+										<div class="calculator-glass-holes calculator-holes holes">
+											<div class="calculator-glass-hole hole hole_last" aria-label="Необязательно (Чтобы получилось - отверстия не обязательно)" data-balloon-pos="up">
+												<span>
+													Отверстия
+												</span>
+												<input type="number" value="0" min="0" max="19" id="glass-bracing_one">
+											</div>
+										</div>
+										<div class="calculator-glass-quantity calculator-holes holes">
+											<div class="hole hole_last">
+												<span>
+													Количество изделий
+												</span>
+												<input type="number" value="1" min="1" id="glass-quantity_one" class="glass-quantity-input">
+											</div>
+										</div>
+										<div class="calculator-glass-message calculator-holes holes">
+											<div class="calculator-glass-hole hole_last">
+												<textarea name="glass-textarea_one" class="glass-textarea" id="glass-textarea_one" placeholder="Ваше примечание к #1"></textarea>
+											</div>
+										</div>
+										<div class="glass-files">
+											<input name="glass-file-one" class="glass-file" id="glass-file_one" type="file">
+											<label for="glass-file-one" class="glass-file-label">Прикрепите файл с чертежом (не обязательно)</label>
+										</div>
+										<div class="calculator-more calculator-glass-more">
+											<input type="checkbox" id="calculator-glass-more__two">
+											<label for="calculator-glass-more__two" class="calculator-more__label">Добавить ещё одно стекло</label>
+										</div>
+
+
+										<!-- Second glass item -->
+										<div class="calculator-glass-hide calculator-glass-hide__two">
+											<div class="calculator-glass-sizes calculator-sizes holes">
+											<div class="calculator-glass-size calculator-size hole" aria-label="Напишите ширину изделия #2" data-balloon-pos="up">
+												<span>
+													Ширина, <br>мм &nbsp;<i class="fas fa-arrows-alt-h"></i>
+												</span>
+												<input type="number" value="1000" min="200" max="3500" id="glass-width_two">
+											</div>
+											<div class="calculator-glass-size calculator-size hole" aria-label="Напишите высоту изделия #2" data-balloon-pos="up">
+												<span>
+													Высота, <br>мм &nbsp;<i class="fas fa-arrows-alt-v"></i>
+												</span>
+												<input type="number" value="1000" min="200" max="5000" id="glass-height_two">
+											</div>
+											<div class="calculator-glass-size calculator-size hole hole_last" aria-label="Напишите толщину изделия #2" data-balloon-pos="up">
+												<span>
+													Толщина, <br>мм &nbsp;<i class="far fa-arrow-to-left"></i>
+												</span>
+												<select name="glass-depth_two" id="glass-depth_two" class="depth-select depth-select_two">
+													<option value="4">4</option>
+													<option value="5">5</option>
+													<option value="6">6</option>
+													<option value="8">8</option>
+													<option value="10">10</option>
+													<option value="12">12</option>
+												</select>
+											</div>
+										</div>
+										<div class="calculator-glass-types types">
+											<h2 class="form__subtitle">
+												Тип стекла
+											</h1>
+											<div class="calculator-glass-types__subtitle calculator-glass-types__subtitle_second form-block">
+												<span class="first">Обычное</span>&nbsp;|&nbsp;<span class="second">Сырое</span>
+												<img src="img/arrow-down.png" alt="arrow-down.png">
+											</div>
+											<div class="calculator-glass-types__content calculator-glass-types__content_second">
+												<div class="calculator-glass-types__block calculator-glass-types__block_first_second form-subblock subblock-line">
+													<span>
+														<input type="radio" id="glass-type-regular__two" name="calculator-glass-types-first__two" class="glass-type-first_two" value="regular" checked>
+														<label for="glass-type-regular__two">Обычное</label>
+														<button class="modal-tooltip__type modal-tooltip modal-tooltip">
+															<i class="fas fa-question-circle"></i>
+														</button>
+													</span>
+													<span>
+														<input type="radio" id="glass-type-light__two" name="calculator-glass-types-first__two" class="glass-type-first_two" value="light">
+														<label for="glass-type-light__two">Просветленное</label>
+														<button class="modal-tooltip__type modal-tooltip">
+															<i class="fas fa-question-circle"></i>
+														</button>
+													</span>
+												</div>
+												<div class="calculator-glass-types__block calculator-glass-types__block_second calculator-glass-types__block_second_second form-subblock">
+													<span>
+														<input type="radio" id="glass-type-raw__two" name="calculator-glass-types-second__two" class="glass-type-second_two" value="raw" checked>
+														<label for="glass-type-raw__two">Сырое</label>
+														<button class="modal-tooltip modal-tooltip__type_raw">
+															<i class="fas fa-question-circle"></i>
+														</button>
+													</span>
+													<span>
+														<input type="radio" id="glass-type-tempered__two" name="calculator-glass-types-second__two" class="glass-type-second_two" value="tempered">
+														<label for="glass-type-tempered__two">Закаленное</label>
+														<button class="modal-tooltip modal-tooltip__type_tempered">
+															<i class="fas fa-question-circle"></i>
+														</button>
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="calculator-glass-edge calculator-edge">
+											<h2 class="form__subtitle">
+												Кромка:
+											</h2>
+											<div class="calculator-glass-edge__subtitle calculator-glass-edge__subtitle_two calculator-edge__subtitle form-block">
+												<span class="first">Не обработанная</span>
+												<img src="img/arrow-down.png" alt="arrow-down.png">
+											</div>
+											<div class="calculator-glass-edge__content calculator-glass-edge__content_two calculator-edge__content calculator-edge__subtitle form-subblock">
+												<span>
+													<input type="radio" id="glass-edge-raw__two" name="calculator-glass-edge__two" class="glass-edge_two" value="0" checked>
+													<label for="glass-edge-raw__two">Не обработанная</label>
+													<button class="modal-tooltip__edge_raw modal-tooltip modal-tooltip_edge">
+														<i class="fas fa-question-circle"></i>
+													</button>
+												</span>
+												<span>
+													<input type="radio" id="glass-edge-polished__two" name="calculator-glass-edge__two" class="glass-edge_two" value="150">
+													<label for="glass-edge-polished__two">Шлифованная</label>
+													<button class="modal-tooltip__edge_polished modal-tooltip modal-tooltip_edge">
+														<i class="fas fa-question-circle"></i>
+													</button>
+												</span>
+												<span>
+													<input type="radio" id="glass-edge-bright__two" name="calculator-glass-edge__two" class="glass-edge_two" value="250">
+													<label for="glass-edge-bright__two">Полированная</label>
+													<button class="modal-tooltip__edge_bright modal-tooltip modal-tooltip_edge">
+														<i class="fas fa-question-circle"></i>
+													</button>
+												</span>
+											</div>
+										</div>
+										<div class="calculator-glass-holes calculator-holes holes">
+											<div class="calculator-glass-hole hole hole_last" aria-label="Необязательно (Чтобы получилось - отверстия не обязательно)" data-balloon-pos="up">
+												<span>
+													Отверстия
+												</span>
+												<input type="number" value="0" min="0" max="19" id="glass-bracing_two">
+											</div>
+										</div>
+										<div class="calculator-glass-quantity calculator-holes holes">
+											<div class="hole hole_last">
+												<span>
+													Количество изделий
+												</span>
+												<input type="number" value="1" min="1" id="glass-quantity_two" class="glass-quantity-input">
+											</div>
+										</div>
+										<div class="calculator-glass-message calculator-holes holes">
+											<div class="calculator-glass-hole hole_last">
+												<textarea name="glass-textarea_two" id="glass-textarea_two" placeholder="Ваше примечание к #2"></textarea>
+											</div>
+										</div>
+										<div class="glass-files">
+											<input name="glass-file-two" class="glass-file" id="glass-file_two" type="file">
+											<label for="glass-file-two" class="glass-file-label">Прикрепите файл с чертежом (не обязательно)</label>
+										</div>
+										<div class="calculator-more calculator-glass-more">
+											<input type="checkbox" id="calculator-glass-more__three">
+											<label for="calculator-glass-more__three" class="calculator-more__label">Добавить ещё одно стекло</label>
+										</div>
+										</div>
+
+										<!-- Second glass item end-->
+
+										<!-- Third glass item -->
+										<div class="calculator-glass-hide calculator-glass-hide__three">
+											<div class="calculator-glass-sizes calculator-sizes holes">
+											<div class="calculator-glass-size calculator-size hole" aria-label="Напишите ширину изделия #3" data-balloon-pos="up">
+												<span>
+													Ширина, мм &nbsp;<i class="fas fa-arrows-alt-h"></i>
+												</span>
+												<input type="number" value="1000" min="200" max="3500" id="glass-width_three">
+											</div>
+											<div class="calculator-glass-size calculator-size hole" aria-label="Напишите высоту изделия #3" data-balloon-pos="up">
+												<span>
+													Высота, мм &nbsp;<i class="fas fa-arrows-alt-v"></i>
+												</span>
+												<input type="number" value="1000" min="200" max="5000" id="glass-height_three">
+											</div>
+											<div class="calculator-glass-size calculator-size hole hole_last" aria-label="Напишите толщину изделия #3" data-balloon-pos="up">
+												<span>
+													Толщина, мм &nbsp;<i class="far fa-arrow-to-left"></i>
+												</span>
+												<select name="glass-depth" id="glass-depth_three" class="depth-select depth-select_three">
+													<option value="4">4</option>
+													<option value="5">5</option>
+													<option value="6">6</option>
+													<option value="8">8</option>
+													<option value="10">10</option>
+													<option value="12">12</option>
+												</select>
+											</div>
+										</div>
+										<div class="calculator-glass-types types">
+											<h2 class="form__subtitle">
+												Тип стекла
+											</h1>
+											<div class="calculator-glass-types__subtitle calculator-glass-types__subtitle_third form-block">
+												<span class="first">Обычное</span>&nbsp;|&nbsp;<span class="second">Сырое</span>
+												<img src="img/arrow-down.png" alt="arrow-down.png">
+											</div>
+											<div class="calculator-glass-types__content calculator-glass-types__content_third">
+												<div class="calculator-glass-types__block calculator-glass-types__block_first_third form-subblock subblock-line">
+													<span>
+														<input type="radio" id="glass-type-regular__three" name="calculator-glass-types-first__three" class="glass-type-first_three" value="regular" checked>
+														<label for="glass-type-regular__three">Обычное</label>
+														<button class="modal-tooltip__type modal-tooltip">
+															<i class="fas fa-question-circle"></i>
+														</button>
+													</span>
+													<span>
+														<input type="radio" id="glass-type-light__three" name="calculator-glass-types-first__three" class="glass-type-first_three" value="light">
+														<label for="glass-type-light__three">Просветленное</label>
+														<button class="modal-tooltip__type modal-tooltip">
+															<i class="fas fa-question-circle"></i>
+														</button>
+													</span>
+												</div>
+												<div class="calculator-glass-types__block calculator-glass-types__block_second calculator-glass-types__block_second_third form-subblock">
+													<span>
+														<input type="radio" id="glass-type-raw__three" name="calculator-glass-types-second__three" class="glass-type-second_three" value="raw" checked>
+														<label for="glass-type-raw__three">Сырое</label>
+														<button class="modal-tooltip modal-tooltip__type_raw">
+															<i class="fas fa-question-circle"></i>
+														</button>
+													</span>
+													<span>
+														<input type="radio" id="glass-type-tempered__three" name="calculator-glass-types-second__three" class="glass-type-second_three" value="tempered">
+														<label for="glass-type-tempered__three">Закаленное</label>
+														<button class="modal-tooltip modal-tooltip__type_tempered">
+															<i class="fas fa-question-circle"></i>
+														</button>
+													</span>
+												</div>
+											</div>
+										</div>
+										<div class="calculator-glass-edge calculator-edge">
+											<h2 class="form__subtitle">
+												Кромка:
+											</h2>
+											<div class="calculator-glass-edge__subtitle calculator-glass-edge__subtitle_third calculator-edge__subtitle form-block">
+												<span class="first">Не обработанная</span>
+												<img src="img/arrow-down.png" alt="arrow-down.png">
+											</div>
+											<div class="calculator-glass-edge__content calculator-glass-edge__content_three calculator-edge__content calculator-edge__subtitle form-subblock">
+												<span>
+													<input type="radio" id="glass-edge-raw__three" name="calculator-glass-edge__three" class="glass-edge_three" value="0" checked>
+													<label for="glass-edge-raw__three">Не обработанная</label>
+													<button class="modal-tooltip__edge_raw modal-tooltip modal-tooltip_edge">
+														<i class="fas fa-question-circle"></i>
+													</button>
+												</span>
+												<span>
+													<input type="radio" id="glass-edge-polished__three" name="calculator-glass-edge__three" class="glass-edge_three" value="150">
+													<label for="glass-edge-polished__three">Шлифованная</label>
+													<button class="modal-tooltip__edge_polished modal-tooltip modal-tooltip_edge">
+														<i class="fas fa-question-circle"></i>
+													</button>
+												</span>
+												<span>
+													<input type="radio" id="glass-edge-bright__three" name="calculator-glass-edge__three" class="glass-edge_three" value="250">
+													<label for="glass-edge-bright__three">Полированная</label>
+													<button class="modal-tooltip__edge_bright modal-tooltip modal-tooltip_edge">
+														<i class="fas fa-question-circle"></i>
+													</button>
+												</span>
+											</div>
+										</div>
+										<div class="calculator-glass-holes calculator-holes holes">
+											<div class="calculator-glass-hole hole hole_last" aria-label="Необязательно (Чтобы получилось - отверстия не обязательно)" data-balloon-pos="up">
+												<span>
+													Отверстия
+												</span>
+												<input type="number" value="0" min="0" max="19" id="glass-bracing_three">
+											</div>
+										</div>
+										<div class="calculator-glass-quantity calculator-holes holes">
+											<div class="hole hole_last">
+												<span>
+													Количество изделий
+												</span>
+												<input type="number" value="1" min="1" id="glass-quantity_three" class="glass-quantity-input">
+											</div>
+										</div>
+										<div class="calculator-glass-message calculator-holes holes">
+											<div class="calculator-glass-hole hole_last">
+												<textarea name="glass-textarea_three" class="glass-textarea_three" id="glass-textarea_three" placeholder="Ваше примечание к #3"></textarea>
+											</div>
+										</div>
+										<div class="glass-files">
+											<input name="glass-file-three" class="glass-file" id="glass-file_three" type="file">
+											<label for="glass-file-three" class="glass-file-label">Прикрепите файл с чертежом (не обязательно)</label>
+										</div>
+										<div class="calculator-more calculator-glass-more">
+											<input type="checkbox" id="calculator-glass-more__four">
+											<label for="calculator-glass-more__four" class="calculator-more__label">Добавить ещё одно стекло</label>
+										</div>
+										</div>
+										<!-- Third glass item end-->
+
+
+										<div class="calculator-glass-total calculator-total form-subblock">
+											<div class="calculator-glass-price calculator-price">
+												<span id="calculator-price-glass" class="calculator-price-text">Итоговая стоимость:</span>
+												<input type="text" value="4490 руб" id="calculator-price-glass-input" class="calculator-price-input" readonly>
+											</div>
+											<div class="calculator-glass-summary calculator-summary">
+												Количество стекла: <span id="calculator-glass-summary__quantity">1</span> шт.,<br> Oбщая площадь: <span id="calculator-glass-summary__square">0</span> м2;
+												<br> Итоговый вес: <span id="calculator-glass-summary__weight">0</span> кг.
+											</div>
+											<button class="btn-two calculator-glass-btn calculator-btn">
+												Перейти к оформлению
+											</button>										
+										</div>
+										<div class="calculator-glass-order calculator-order">
+											<span class="form-block">
+												Введите Ваше имя и телефон
+											</span>
+											<div class="calculator-order-inputs form-subblock">
+												<input type="text" name="name" placeholder="Имя" required>
+												<input type="tel" name="phone" placeholder="Телефон" required>
+												<button class="btn-two contacts-order__btn">
+													Оформить
+												</button>
+											</div>
+										</div>
+									</form>
+								</div>
+								<!-----------------------Glass calculator end------------------------->
+
+								<!----------------------- Mirror calculator  ------------------------->
+								<div id="calculator-mirror" class="calculator-common">
+									<form id="calculator-mirror-form">
+										<input type="radio" id="mirror_hide" name="form-radio__item_hide" class="form-radio__item_hide">
+
+										<!-- One glass item -->
+										<div class="calculator-mirror-sizes calculator-sizes holes">
+											<div class="calculator-mirror-size calculator-size hole" aria-label="Напишите ширину изделия #1" data-balloon-pos="up">
+												<span>
+													Ширина, <br>мм &nbsp;<i class="fas fa-arrows-alt-h"></i>
+												</span>
+												<input type="number" value="1000" min="200" max="3500" id="mirror-width_one">
+											</div>
+											<div class="calculator-mirror-size calculator-size hole" aria-label="Напишите высоту изделия #1" data-balloon-pos="up">
+												<span>
+													Высота, <br>мм &nbsp;<i class="fas fa-arrows-alt-v"></i>
+												</span>
+												<input type="number" value="1000" min="200" max="5000" id="mirror-height_one">
+											</div>
+											<div class="calculator-mirror-size calculator-size hole hole_last" aria-label="Напишите толщину изделия #1" data-balloon-pos="up">
+												<span>
+													Толщина, мм &nbsp;<i class="far fa-arrow-to-left"></i>
+												</span>
+												<select name="mirror-depth_one" id="mirror-depth_one" class="depth-select depth-select_one">
+													<option value="4">4</option>
+													<option value="5">5</option>
+													<option value="6">6</option>
+												</select>
+											</div>
+										</div>
+										<div class="calculator-mirror-holes calculator-holes holes">
+											<div class="calculator-mirror-hole calculator-mirror-hole_material hole hole_last">
+												<span>
+													Вид материала:
+												</span>
+												<div class="calculator-mirror-radio">
+													<div class="calculator-mirror-radio__item">
+														<input type="radio" id="mirror-material-silver_one" name="mirror-material-kind_one" class="mirror-type_one" value="silver" checked>
+														<label for="mirror-material-silver_one">Серебро</label>
+													</div>
+													<div class="calculator-mirror-radio__item">
+														<input type="radio" id="mirror-material-bronze_one" name="mirror-material-kind_one" class="mirror-type_one" value="bronze">
+														<label for="mirror-material-bronze_one">Бронза</label>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="calculator-mirror-edge calculator-edge">
+											<h2 class="form__subtitle">
+												Кромка:
+											</h2>
+											<div class="calculator-mirror-edge__subtitle calculator-mirror-edge__subtitle_one calculator-edge__subtitle form-block">
+												<span class="first">Не обработанная</span>
+												<img src="img/arrow-down.png" alt="arrow-down.png">
+											</div>
+											<div class="calculator-mirror-edge__content calculator-mirror-edge__content_one calculator-edge__content form-subblock">
+												<span>
+													<input type="radio" id="mirror-edge-raw_one" name="mirror-edge_one" class="mirror-edge_one" value="0" checked>
+													<label for="mirror-edge-raw_one">Не обработанная</label>
+													<button class="modal-tooltip__edge_raw modal-tooltip modal-tooltip_edge">
+														<i class="fas fa-question-circle"></i>
+													</button>
+												</span>
+												<span>
+													<input type="radio" id="mirror-edge-polished_one" name="mirror-edge_one" class="mirror-edge_one" value="150">
+													<label for="mirror-edge-polished_one">Шлифованная</label>
+													<button class="modal-tooltip__edge_polished modal-tooltip modal-tooltip_edge">
+														<i class="fas fa-question-circle"></i>
+													</button>
+												</span>
+												<span>
+													<input type="radio" id="mirror-edge-bright_one" name="mirror-edge_one" class="mirror-edge_one" value="250">
+													<label for="mirror-edge-bright_one">Полированная</label>
+													<button class="modal-tooltip__edge_bright modal-tooltip modal-tooltip_edge">
+														<i class="fas fa-question-circle"></i>
+													</button>
+												</span>
+											</div>
+										</div>
+										<div class="calculator-mirror-holes calculator-holes holes">
+											<div class="calculator-mirror-hole hole calculator-mirror-hole_last" aria-label="Необязательно (Чтобы получилось - отверстия не обязательно)" data-balloon-pos="up">
+												<span>
+													Отверстия
+												</span>
+												<input type="number" value="0" min="0" max="19" id="mirror-bracing_one">
+											</div>
+											<div class="calculator-mirror-hole hole hole_last" aria-label="Необязательно (Чтобы получилось - вырезы не обязательно)" data-balloon-pos="up">
+												<span>
+													Вырезы
+												</span>
+												<input type="number" value="0" min="0" max="9" id="mirror-cut_one">
+											</div>
+										</div>
+										<div class="calculator-mirror-quantity calculator-holes holes">
+											<div class="hole hole_last">
+												<span>
+													Количество изделий
+												</span>
+												<input type="number" value="1" min="1" id="mirror-quantity_one" class="glass-quantity-input">
+											</div>
+										</div>
+										<div class="calculator-glass-message calculator-holes holes">
+											<div class="calculator-glass-hole hole_last">
+												<textarea name="mirror-textarea_one" class="mirror-textarea" id="mirror-textarea_one" placeholder="Ваше примечание к #1"></textarea>
+											</div>
+										</div>
+										<div class="glass-files">
+											<input name="mirror-file-one" class="glass-file" id="mirror-file_one" type="file">
+											<label for="mirror-file-one" class="glass-file-label">Прикрепите файл с чертежом (не обязательно)</label>
+										</div>
+										<div class="calculator-more calculator-glass-more">
+											<input type="checkbox" id="calculator-mirror-more__two">
+											<label for="calculator-mirror-more__two" class="calculator-more__label">Добавить ещё одно зеркало</label>
+										</div>
+										<!-- One mirror item end -->
+
+										<!-- Two mirror item -->
+										<div class="calculator-mirror-hide calculator-mirror-hide__two">
+											<div class="calculator-mirror-sizes calculator-sizes holes">
+												<div class="calculator-mirror-size calculator-size hole" aria-label="Напишите ширину изделия #2" data-balloon-pos="up">
+													<span>
+														Ширина, <br>мм &nbsp;<i class="fas fa-arrows-alt-h"></i>
+													</span>
+													<input type="number" value="1000" min="200" max="3500" id="mirror-width_two">
+												</div>
+												<div class="calculator-mirror-size calculator-size hole" aria-label="Напишите высоту изделия #2" data-balloon-pos="up">
+													<span>
+														Высота, <br>мм &nbsp;<i class="fas fa-arrows-alt-v"></i>
+													</span>
+													<input type="number" value="1000" min="200" max="5000" id="mirror-height_two">
+												</div>
+												<div class="calculator-mirror-size calculator-size hole hole_last" aria-label="Напишите толщину изделия #2" data-balloon-pos="up">
+													<span>
+														Толщина, <br>мм &nbsp;<i class="far fa-arrow-to-left"></i>
+													</span>
+													<select name="mirror-depth_two" id="mirror-depth_two" class="depth-select depth-select_two">
+														<option value="4">4</option>
+														<option value="5">5</option>
+														<option value="6">6</option>
+													</select>
+												</div>
+											</div>
+											<div class="calculator-mirror-holes calculator-holes holes">
+												<div class="calculator-mirror-hole calculator-mirror-hole_material hole hole_last">
+													<span>
+														Вид материала:
+													</span>
+													<div class="calculator-mirror-radio">
+														<div class="calculator-mirror-radio__item">
+															<input type="radio" id="mirror-material-silver_two" name="mirror-material-kind_two" class="mirror-type_two" value="silver" checked>
+															<label for="mirror-material-silver_two">Серебро</label>
+														</div>
+														<div class="calculator-mirror-radio__item">
+															<input type="radio" id="mirror-material-bronze_two" name="mirror-material-kind_two" class="mirror-type_two" value="bronze">
+															<label for="mirror-material-bronze_two">Бронза</label>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="calculator-mirror-edge calculator-edge">
+												<h2 class="form__subtitle">
+													Кромка:
+												</h2>
+												<div class="calculator-mirror-edge__subtitle calculator-mirror-edge__subtitle_two calculator-edge__subtitle form-block">
+													<span class="first">Не обработанная</span>
+													<img src="img/arrow-down.png" alt="arrow-down.png">
+												</div>
+												<div class="calculator-mirror-edge__content calculator-mirror-edge__content_two calculator-edge__content form-subblock">
+													<span>
+														<input type="radio" id="mirror-edge-raw_two" name="mirror-edge_two" class="mirror-edge_two" value="0" checked>
+														<label for="mirror-edge-raw_two">Не обработанная</label>
+														<button class="modal-tooltip__edge_raw modal-tooltip modal-tooltip_edge">
+															<i class="fas fa-question-circle"></i>
+														</button>
+													</span>
+													<span>
+														<input type="radio" id="mirror-edge-polished_two" name="mirror-edge_two" class="mirror-edge_two" value="150">
+														<label for="mirror-edge-polished_two">Шлифованная</label>
+														<button class="modal-tooltip__edge_polished modal-tooltip modal-tooltip_edge">
+															<i class="fas fa-question-circle"></i>
+														</button>
+													</span>
+													<span>
+														<input type="radio" id="mirror-edge-bright_two" name="mirror-edge_two" class="mirror-edge_two" value="250">
+														<label for="mirror-edge-bright_two">Полированная</label>
+														<button class="modal-tooltip__edge_bright modal-tooltip modal-tooltip_edge">
+															<i class="fas fa-question-circle"></i>
+														</button>
+													</span>
+												</div>
+											</div>
+											<div class="calculator-mirror-holes calculator-holes holes">
+												<div class="calculator-mirror-hole hole calculator-mirror-hole_last" aria-label="Необязательно (Чтобы получилось - отверстия не обязательно)" data-balloon-pos="up">
+													<span>
+														Отверстия
+													</span>
+													<input type="number" value="0" min="0" max="19" id="mirror-bracing_two">
+												</div>
+												<div class="calculator-mirror-hole hole hole_last" aria-label="Необязательно (Чтобы получилось - вырезы не обязательно)" data-balloon-pos="up">
+												<span>
+													Вырезы
+												</span>
+												<input type="number" value="0" min="0" max="9" id="mirror-cut_two">
+											</div>
+											</div>
+											<div class="calculator-mirror-quantity calculator-holes holes">
+												<div class="hole hole_last">
+													<span>
+														Количество изделий
+													</span>
+													<input type="number" value="1" min="1" id="mirror-quantity_two" class="glass-quantity-input">
+												</div>
+											</div>
+											<div class="calculator-glass-message calculator-holes holes">
+												<div class="calculator-glass-hole hole_last">
+													<textarea name="mirror-textarea_two" class="mirror-textarea" id="mirror-textarea_two" placeholder="Ваше примечание к #2"></textarea>
+												</div>
+											</div>
+											<div class="glass-files">
+												<input name="mirror-file-two" class="glass-file" id="mirror-file_two" type="file">
+												<label for="mirror-file-two" class="glass-file-label">Прикрепите файл с чертежом (не обязательно)</label>
+											</div>
+											<div class="calculator-more calculator-glass-more">
+												<input type="checkbox" id="calculator-mirror-more__three">
+												<label for="calculator-mirror-more__three" class="calculator-more__label">Добавить ещё одно зеркало</label>
+											</div>
+										</div>
+										<!-- Two mirror item end-->
+
+										<!-- Three mirror item -->
+										<div class="calculator-mirror-hide calculator-mirror-hide__three">
+											<div class="calculator-mirror-sizes calculator-sizes holes">
+												<div class="calculator-mirror-size calculator-size hole" aria-label="Напишите ширину изделия #3" data-balloon-pos="up">
+													<span>
+														Ширина, <br>мм &nbsp;<i class="fas fa-arrows-alt-h"></i>
+													</span>
+													<input type="number" value="1000" min="200" max="3500" id="mirror-width_three">
+												</div>
+												<div class="calculator-mirror-size calculator-size hole" aria-label="Напишите высоту изделия #3" data-balloon-pos="up">
+													<span>
+														Высота, <br>мм &nbsp;<i class="fas fa-arrows-alt-v"></i>
+													</span>
+													<input type="number" value="1000" min="200" max="5000" id="mirror-height_three">
+												</div>
+												<div class="calculator-mirror-size calculator-size hole hole_last" aria-label="Напишите толщину изделия #3" data-balloon-pos="up">
+													<span>
+														Толщина, <br>мм &nbsp;<i class="far fa-arrow-to-left"></i>
+													</span>
+													<select name="mirror-depth_three" id="mirror-depth_three" class="depth-select depth-select_three">
+														<option value="4">4</option>
+														<option value="5">5</option>
+														<option value="6">6</option>
+													</select>
+												</div>
+											</div>
+											<div class="calculator-mirror-holes calculator-holes holes">
+												<div class="calculator-mirror-hole calculator-mirror-hole_material hole hole_last">
+													<span>
+														Вид материала:
+													</span>
+													<div class="calculator-mirror-radio">
+														<div class="calculator-mirror-radio__item">
+															<input type="radio" id="mirror-material-silver_three" name="mirror-material-kind_three" class="mirror-type_three" value="silver" checked>
+															<label for="mirror-material-silver_three">Серебро</label>
+														</div>
+														<div class="calculator-mirror-radio__item">
+															<input type="radio" id="mirror-material-bronze_three" name="mirror-material-kind_three" class="mirror-type_three" value="bronze">
+															<label for="mirror-material-bronze_three">Бронза</label>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="calculator-mirror-edge calculator-edge">
+												<h2 class="form__subtitle">
+													Кромка:
+												</h2>
+												<div class="calculator-mirror-edge__subtitle calculator-mirror-edge__subtitle_three calculator-edge__subtitle form-block">
+													<span class="first">Не обработанная</span>
+													<img src="img/arrow-down.png" alt="arrow-down.png">
+												</div>
+												<div class="calculator-mirror-edge__content calculator-mirror-edge__content_three calculator-edge__content form-subblock">
+													<span>
+														<input type="radio" id="mirror-edge-raw_three" name="mirror-edge_three" class="mirror-edge_three" value="0" checked>
+														<label for="mirror-edge-raw_three">Не обработанная</label>
+														<button class="modal-tooltip__edge_raw modal-tooltip modal-tooltip_edge">
+															<i class="fas fa-question-circle"></i>
+														</button>
+													</span>
+													<span>
+														<input type="radio" id="mirror-edge-polished_three" name="mirror-edge_three" class="mirror-edge_three" value="150">
+														<label for="mirror-edge-polished_three">Шлифованная</label>
+														<button class="modal-tooltip__edge_polished modal-tooltip modal-tooltip_edge">
+															<i class="fas fa-question-circle"></i>
+														</button>
+													</span>
+													<span>
+														<input type="radio" id="mirror-edge-bright_three" name="mirror-edge_three" class="mirror-edge_three" value="250">
+														<label for="mirror-edge-bright_three">Полированная</label>
+														<button class="modal-tooltip__edge_bright modal-tooltip modal-tooltip_edge">
+															<i class="fas fa-question-circle"></i>
+														</button>
+													</span>
+												</div>
+											</div>
+											<div class="calculator-mirror-holes calculator-holes holes">
+												<div class="calculator-mirror-hole hole calculator-mirror-hole_last" aria-label="Необязательно (Чтобы получилось - отверстия не обязательно)" data-balloon-pos="up">
+													<span>
+														Отверстия
+													</span>
+													<input type="number" value="0" min="0" max="19" id="mirror-bracing_three">
+												</div>
+												<div class="calculator-mirror-hole hole hole_last"  aria-label="Необязательно (Чтобы получилось - вырезы не обязательно)" data-balloon-pos="up">
+													<span>
+														Вырезы
+													</span>
+												<input type="number" value="0" min="0" max="9" id="mirror-cut_three">
+											</div>
+											</div>
+											<div class="calculator-mirror-quantity calculator-holes holes">
+												<div class="hole hole_last">
+													<span>
+														Количество изделий
+													</span>
+													<input type="number" value="1" min="1" id="mirror-quantity_three" class="glass-quantity-input">
+												</div>
+											</div>
+											<div class="calculator-glass-message calculator-holes holes">
+												<div class="calculator-glass-hole hole_last">
+													<textarea name="mirror-textarea_three" class="mirror-textarea" id="mirror-textarea_three" placeholder="Ваше примечание к #3"></textarea>
+												</div>
+											</div>
+											<div class="glass-files">
+												<input name="mirror-file-two" class="glass-file" id="mirror-file_two" type="file">
+												<label for="mirror-file-two" class="glass-file-label">Прикрепите файл с чертежом (не обязательно)</label>
+											</div>
+											<div class="calculator-more calculator-glass-more">
+												<input type="checkbox" id="calculator-mirror-more__four">
+												<label for="calculator-mirror-more__four" class="calculator-more__label">Добавить ещё одно зеркало</label>
+											</div>
+										</div>
+										<!-- Three mirror item end-->
+
+										<div class="calculator-mirror-total calculator-total form-subblock">
+											<div class="calculator-mirror-price calculator-price">
+												<span id="calculator-price-mirror" class="calculator-price-text">Итоговая стоимость:</span>
+												<input type="text" value="4490 руб" id="calculator-price-mirror-input" class="calculator-price-input" readonly>
+											</div>
+											<div class="calculator-mirror-summary calculator-summary">
+												Количество зеркала: <span id="calculator-mirror-summary__quantity">1</span> шт.,<br> Общая площадь: <span id="calculator-mirror-summary__square">0</span> м2;
+												<br> Итоговый вес: <span id="calculator-mirror-summary__weight">0</span> кг.
+											</div>
+											<button class="btn-two calculator-mirror-btn calculator-btn">
+												Перейти к оформлению
+											</button>										
+										</div>
+										<div class="calculator-mirror-order calculator-order">
+											<span class="form-block">
+												Введите Ваше имя и телефон
+											</span>
+											<div class="calculator-order-inputs form-subblock">
+												<input type="text" name="name" placeholder="Имя" required>
+												<input type="tel" name="phone" placeholder="Телефон" required>
+												<button class="btn-two contacts-order__btn">
+													Оформить
+												</button>
+											</div>
+										</div>
+									</form>
+								</div>
+								<!----------------------- Mirror calculator end ------------------------->
+
+								<!----------------------- Skinali calculator ------------------------->
+								<div id="calculator-skinali" class="calculator-common">
+									<form id="calculator-door-skinali">
+										<input type="radio" id="skinali_hide" name="form-radio__item_hide" class="form-radio__item_hide">
+
+										<!-- One skinali item -->
+										<div class="calculator-skinali-hide calculator-skinali-hide__one">
+											<div class="calculator-skinali-sizes calculator-sizes holes">
+												<div class="calculator-skinali-size calculator-size hole" aria-label="Напишите ширину изделия #1" data-balloon-pos="up">
+													<span>
+														Ширина, <br>мм &nbsp;<i class="fas fa-arrows-alt-h"></i>
+													</span>
+													<input type="number" value="1000" min="200" max="3500" id="skinali-width_one">
+												</div>
+												<div class="calculator-skinali-size calculator-size hole" aria-label="Напишите высоту изделия #1" data-balloon-pos="up">
+													<span>
+														Высота, <br>мм &nbsp;<i class="fas fa-arrows-alt-v"></i>
+													</span>
+													<input type="number" value="1000" min="200" max="5000" id="skinali-height_one">
+												</div>
+												<div class="calculator-skinali-size calculator-size hole hole_last" aria-label="Напишите толщину изделия #1" data-balloon-pos="up">
+													<span>
+														Толщина, <br>мм &nbsp;<i class="far fa-arrow-to-left"></i>
+													</span>
+													<select name="skinali-depth_one" id="skinali-depth_one" class="depth-select depth-select_one">
+														<option value="5">5</option>
+														<option value="6">6</option>
+														<option value="8">8</option>
+														<option value="10">10</option>
+														<option value="12">12</option>
+													</select>
+												</div>
+											</div>
+											<div class="calculator-skinali-types types">
+												<h2 class="form__subtitle">
+													Тип стекла
+												</h1>
+												<div class="calculator-skinali-types__subtitle calculator-skinali-types__subtitle_first form-block">
+													<span class="first">Обычное</span>
+													<img src="img/arrow-down.png" alt="arrow-down.png">
+												</div>
+												<div class="calculator-glass-types__content calculator-skinali-types__content_first">
+													<div class="calculator-skinali-types__block calculator-skinali-types__block_first calculator-skinali-types__block_first_first form-subblock">
+														<span>
+															<input type="radio" id="skinali-type-regular_one" name="calculator-skinali-types-first_one" class="skinali-type-first_one" value="regular" checked>
+															<label for="skinali-type-regular_one">Обычное</label>
+															<button class="modal-tooltip__type modal-tooltip modal-tooltip_edge">
+																<i class="fas fa-question-circle"></i>
+															</button>
+														</span>
+														<span>
+															<input type="radio" id="skinali-type-light_one" name="calculator-skinali-types-first_one" class="skinali-type-first_one" value="light">
+															<label for="skinali-type-light_one">Просветленное</label>
+															<button class="modal-tooltip__type modal-tooltip modal-tooltip_edge">
+																<i class="fas fa-question-circle"></i>
+															</button>
+														</span>
+														<span>
+															<input type="radio" id="skinali-type-mat_one" name="calculator-skinali-types-first_one" class="skinali-type-first_one" value="mat">
+															<label for="skinali-type-mat_one">Матовое/Цветное</label>
+															<button class="modal-tooltip__type_color modal-tooltip modal-tooltip_edge">
+																<i class="fas fa-question-circle"></i>
+															</button>
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="calculator-skinali-edge calculator-edge">
+												<h2 class="form__subtitle">
+													Кромка:
+												</h2>
+												<div class="calculator-skinali-edge__subtitle calculator-skinali-edge__subtitle_one calculator-edge__subtitle form-block">
+													<span class="first">Шлифованная</span>
+													<img src="img/arrow-down.png" alt="arrow-down.png">
+												</div>
+												<div class="calculator-skinali-edge__content calculator-skinali-edge__content_one calculator-edge__content calculator-edge__subtitle form-subblock">
+													<span>
+														<input type="radio" id="skinali-edge-polished_one" name="calculator-skinali-edge_one" class="skinali-edge_one" value="0" checked>
+														<label for="skinali-edge-polished_one">Шлифованная</label>
+														<button class="modal-tooltip__edge_polished modal-tooltip modal-tooltip_edge">
+															<i class="fas fa-question-circle"></i>
+														</button>
+													</span>
+													<span>
+														<input type="radio" id="skinali-edge-bright_one" name="calculator-skinali-edge_one" class="skinali-edge_one" value="250">
+														<label for="skinali-edge-bright_one">Полированная</label>
+														<button class="modal-tooltip__edge_bright modal-tooltip modal-tooltip_edge">
+															<i class="fas fa-question-circle"></i>
+														</button>
+													</span>
+												</div>
+											</div>
+											<div class="calculator-skinali-holes calculator-holes holes">
+												<div class="calculator-skinali-hole hole calculator-skinali-hole_last" aria-label="Необязательно (Чтобы получилось - отверстия не обязательно)" data-balloon-pos="up">
+													<span>
+														Отверстия
+													</span>
+													<input type="number" value="0" min="0" max="19" id="skinali-bracing_one">
+												</div>
+												<div class="calculator-skinali-hole hole hole_last" aria-label="Необязательно (Чтобы получилось - вырезы не обязательно)" data-balloon-pos="up">
+													<span>
+														Вырезы
+													</span>
+													<input type="number" value="0" min="0" max="9" id="skinali-cut_one">
+												</div>
+											</div>
+											<div class="calculator-skinali-quantity calculator-quantity calculator-holes holes">
+												<div class="hole hole_last">
+													<span>
+														Количество изделий
+													</span>
+													<input type="number" value="1" min="1" id="skinali-quantity_one" class="skinali-quantity-input">
+												</div>
+											</div>
+											<div class="calculator-glass-message calculator-message calculator-holes holes">
+												<div class="calculator-glass-hole hole_last">
+													<textarea name="skinali-textarea_one" class="skinali-textarea" id="skinali-textarea_one" placeholder="Ваше примечание к #1"></textarea>
+												</div>
+											</div>
+											<div class="glass-files">
+												<input name="skinali-file-one" class="glass-file" id="skinali-file_one" type="file">
+												<label for="skinali-file-one" class="glass-file-label">Прикрепите файл с чертежом (не обязательно)</label>
+											</div>
+											<div class="calculator-more calculator-skinali-more">
+												<input type="checkbox" id="calculator-skinali-more__two">
+												<label for="calculator-skinali-more__two" class="calculator-more__label">Добавить ещё одно скинали</label>
+											</div>
+										</div>
+										<!-- One skinali item end-->
+
+										<!-- Two skinali item -->
+										<div class="calculator-skinali-hide calculator-skinali-hide__two">
+											<div class="calculator-skinali-sizes calculator-sizes holes">
+												<div class="calculator-skinali-size calculator-size hole" aria-label="Напишите ширину изделия #2" data-balloon-pos="up">
+													<span>
+														Ширина, <br>мм &nbsp;<i class="fas fa-arrows-alt-h"></i>
+													</span>
+													<input type="number" value="1000" min="200" max="3500" id="skinali-width_two">
+												</div>
+												<div class="calculator-skinali-size calculator-size hole" aria-label="Напишите высоту изделия #2" data-balloon-pos="up">
+													<span>
+														Высота, <br>мм &nbsp;<i class="fas fa-arrows-alt-v"></i>
+													</span>
+													<input type="number" value="1000" min="200" max="5000" id="skinali-height_two">
+												</div>
+												<div class="calculator-skinali-size calculator-size hole hole_last" aria-label="Напишите толщину изделия #2" data-balloon-pos="up">
+													<span>
+														Толщина, <br>мм &nbsp;<i class="far fa-arrow-to-left"></i>
+													</span>
+													<select name="skinali-depth_two" id="skinali-depth_two" class="depth-select depth-select_two">
+														<option value="5">5</option>
+														<option value="6">6</option>
+														<option value="8">8</option>
+														<option value="10">10</option>
+														<option value="12">12</option>
+													</select>
+												</div>
+											</div>
+											<div class="calculator-skinali-types types">
+												<h2 class="form__subtitle">
+													Тип стекла
+												</h1>
+												<div class="calculator-skinali-types__subtitle calculator-skinali-types__subtitle_second form-block">
+													<span class="first">Обычное</span>
+													<img src="img/arrow-down.png" alt="arrow-down.png">
+												</div>
+												<div class="calculator-glass-types__content calculator-skinali-types__content_second">
+													<div class="calculator-skinali-types__block calculator-skinali-types__block_first calculator-skinali-types__block_first_second form-subblock">
+														<span>
+															<input type="radio" id="skinali-type-regular_two" name="calculator-skinali-types-first_two" class="skinali-type-first_two" value="regular" checked>
+															<label for="skinali-type-regular_two">Обычное</label>
+															<button class="modal-tooltip__type modal-tooltip modal-tooltip_edge">
+																<i class="fas fa-question-circle"></i>
+															</button>
+														</span>
+														<span>
+															<input type="radio" id="skinali-type-light_two" name="calculator-skinali-types-first_two" class="skinali-type-first_two" value="light">
+															<label for="skinali-type-light_two">Просветленное</label>
+															<button class="modal-tooltip__type modal-tooltip modal-tooltip_edge">
+																<i class="fas fa-question-circle"></i>
+															</button>
+														</span>
+														<span>
+															<input type="radio" id="skinali-type-mat_two" name="calculator-skinali-types-first_two" class="skinali-type-first_two" value="mat">
+															<label for="skinali-type-mat_two">Матовое/Цветное</label>
+															<button class="modal-tooltip__type_color modal-tooltip modal-tooltip_edge">
+																<i class="fas fa-question-circle"></i>
+															</button>
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="calculator-skinali-edge calculator-edge">
+												<h2 class="form__subtitle">
+													Кромка:
+												</h2>
+												<div class="calculator-skinali-edge__subtitle calculator-skinali-edge__subtitle_two calculator-edge__subtitle form-block">
+													<span class="first">Шлифованная</span>
+													<img src="img/arrow-down.png" alt="arrow-down.png">
+												</div>
+												<div class="calculator-skinali-edge__content calculator-skinali-edge__content_two calculator-edge__content calculator-edge__subtitle form-subblock">
+													<span>
+														<input type="radio" id="skinali-edge-polished_two" name="calculator-skinali-edge_two" class="skinali-edge_two" value="0" checked>
+														<label for="skinali-edge-polished_two">Шлифованная</label>
+														<button class="modal-tooltip__edge_polished modal-tooltip modal-tooltip_edge">
+															<i class="fas fa-question-circle"></i>
+														</button>
+													</span>
+													<span>
+														<input type="radio" id="skinali-edge-bright_two" name="calculator-skinali-edge_two" class="skinali-edge_two" value="250">
+														<label for="skinali-edge-bright_two">Полированная</label>
+														<button class="modal-tooltip__edge_bright modal-tooltip modal-tooltip_edge">
+															<i class="fas fa-question-circle"></i>
+														</button>
+													</span>
+												</div>
+											</div>
+											<div class="calculator-skinali-holes calculator-holes holes">
+												<div class="calculator-skinali-hole hole calculator-skinali-hole_last" aria-label="Необязательно (Чтобы получилось - отверстия не обязательно)" data-balloon-pos="up">
+													<span>
+														Отверстия
+													</span>
+													<input type="number" value="0" min="0" max="19" id="skinali-bracing_two">
+												</div>
+												<div class="calculator-skinali-hole hole hole_last" aria-label="Необязательно (Чтобы получилось - вырезы не обязательно)" data-balloon-pos="up">
+													<span>
+														Вырезы
+													</span>
+													<input type="number" value="0" min="0" max="9" id="skinali-cut_two">
+												</div>
+											</div>
+											<div class="calculator-skinali-quantity calculator-quantity calculator-holes holes">
+												<div class="hole hole_last">
+													<span>
+														Количество изделий
+													</span>
+													<input type="number" value="1" min="1" id="skinali-quantity_two" class="skinali-quantity-input">
+												</div>
+											</div>
+											<div class="calculator-glass-message calculator-message calculator-holes holes">
+												<div class="calculator-glass-hole hole_last">
+													<textarea name="skinali-textarea_two" class="skinali-textarea" id="skinali-textarea_two" placeholder="Ваше примечание к #2"></textarea>
+												</div>
+											</div>
+											<div class="glass-files">
+												<input name="skinali-file-two" class="glass-file" id="skinali-file_two" type="file">
+												<label for="skinali-file-two" class="glass-file-label">Прикрепите файл с чертежом (не обязательно)</label>
+											</div>
+											<div class="calculator-more calculator-skinali-more">
+												<input type="checkbox" id="calculator-skinali-more__three">
+												<label for="calculator-skinali-more__three" class="calculator-more__label">Добавить ещё одно скинали</label>
+											</div>
+										</div>
+										<!-- Two skinali item end-->
+
+										<!-- Three skinali item -->
+										<div class="calculator-skinali-hide calculator-skinali-hide__three">
+											<div class="calculator-skinali-sizes calculator-sizes holes">
+												<div class="calculator-skinali-size calculator-size hole" aria-label="Напишите ширину изделия #3" data-balloon-pos="up">
+													<span>
+														Ширина, <br>мм &nbsp;<i class="fas fa-arrows-alt-h"></i>
+													</span>
+													<input type="number" value="1000" min="200" max="3500" id="skinali-width_three">
+												</div>
+												<div class="calculator-skinali-size calculator-size hole" aria-label="Напишите высоту изделия #3" data-balloon-pos="up">
+													<span>
+														Высота, <br>мм &nbsp;<i class="fas fa-arrows-alt-v"></i>
+													</span>
+													<input type="number" value="1000" min="200" max="5000" id="skinali-height_three">
+												</div>
+												<div class="calculator-skinali-size calculator-size hole hole_last" aria-label="Напишите толщину изделия #3" data-balloon-pos="up">
+													<span>
+														Толщина, <br>мм &nbsp;<i class="far fa-arrow-to-left"></i>
+													</span>
+													<select name="skinali-depth_three" id="skinali-depth_three" class="depth-select depth-select_three">
+														<option value="5">5</option>
+														<option value="6">6</option>
+														<option value="8">8</option>
+														<option value="10">10</option>
+														<option value="12">12</option>
+													</select>
+												</div>
+											</div>
+											<div class="calculator-skinali-types types">
+												<h2 class="form__subtitle">
+													Тип стекла
+												</h1>
+												<div class="calculator-skinali-types__subtitle calculator-skinali-types__subtitle_third form-block">
+													<span class="first">Обычное</span>
+													<img src="img/arrow-down.png" alt="arrow-down.png">
+												</div>
+												<div class="calculator-glass-types__content calculator-skinali-types__content_third">
+													<div class="calculator-skinali-types__block calculator-skinali-types__block_first calculator-skinali-types__block_first_thirdcalculator-glass-edge__content_two form-subblock">
+														<span>
+															<input type="radio" id="skinali-type-regular_three" name="calculator-skinali-types-first_three" class="skinali-type-first_three" value="regular" checked>
+															<label for="skinali-type-regular_three">Обычное</label>
+															<button class="modal-tooltip__type modal-tooltip modal-tooltip_edge">
+																<i class="fas fa-question-circle"></i>
+															</button>
+														</span>
+														<span>
+															<input type="radio" id="skinali-type-light_three" name="calculator-skinali-types-first_three" class="skinali-type-first_three" value="light">
+															<label for="skinali-type-light_three">Просветленное</label>
+															<button class="modal-tooltip__type modal-tooltip modal-tooltip_edge">
+																<i class="fas fa-question-circle"></i>
+															</button>
+														</span>
+														<span>
+															<input type="radio" id="skinali-type-mat_three" name="calculator-skinali-types-first_three" class="skinali-type-first_three" value="mat">
+															<label for="skinali-type-mat_three">Матовое/Цветное</label>
+															<button class="modal-tooltip__type_color modal-tooltip modal-tooltip_edge">
+																<i class="fas fa-question-circle"></i>
+															</button>
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="calculator-skinali-edge calculator-edge">
+												<h2 class="form__subtitle">
+													Кромка:
+												</h2>
+												<div class="calculator-skinali-edge__subtitle calculator-skinali-edge__subtitle_three calculator-edge__subtitle form-block">
+													<span class="first">Шлифованная</span>
+													<img src="img/arrow-down.png" alt="arrow-down.png">
+												</div>
+												<div class="calculator-skinali-edge__content calculator-skinali-edge__content_three calculator-edge__content calculator-edge__subtitle form-subblock">
+													<span>
+														<input type="radio" id="skinali-edge-polished_three" name="calculator-skinali-edge_three" class="skinali-edge_three" value="0" checked>
+														<label for="skinali-edge-polished_three">Шлифованная</label>
+														<button class="modal-tooltip__edge_polished modal-tooltip modal-tooltip_edge">
+															<i class="fas fa-question-circle"></i>
+														</button>
+													</span>
+													<span>
+														<input type="radio" id="skinali-edge-bright_three" name="calculator-skinali-edge_three" class="skinali-edge_three" value="250">
+														<label for="skinali-edge-bright_three">Полированная</label>
+														<button class="modal-tooltip__edge_bright modal-tooltip modal-tooltip_edge">
+															<i class="fas fa-question-circle"></i>
+														</button>
+													</span>
+												</div>
+											</div>
+											<div class="calculator-skinali-holes calculator-holes holes">
+												<div class="calculator-skinali-hole hole calculator-skinali-hole_last" aria-label="Необязательно (Чтобы получилось - отверстия не обязательно)" data-balloon-pos="up">
+													<span>
+														Отверстия
+													</span>
+													<input type="number" value="0" min="0" max="19" id="skinali-bracing_three">
+												</div>
+												<div class="calculator-skinali-hole hole hole_last" aria-label="Необязательно (Чтобы получилось - вырезы не обязательно)" data-balloon-pos="up">
+													<span>
+														Вырезы
+													</span>
+													<input type="number" value="0" min="0" max="9" id="skinali-cut_three">
+												</div>
+											</div>
+											<div class="calculator-skinali-quantity calculator-quantity calculator-holes holes">
+												<div class="hole hole_last">
+													<span>
+														Количество изделий
+													</span>
+													<input type="number" value="1" min="1" id="skinali-quantity_three" class="skinali-quantity-input">
+												</div>
+											</div>
+											<div class="calculator-glass-message calculator-message calculator-holes holes">
+												<div class="calculator-glass-hole hole_last">
+													<textarea name="skinali-textarea_three" class="skinali-textarea" id="skinali-textarea_three" placeholder="Ваше примечание к #3"></textarea>
+												</div>
+											</div>
+											<div class="glass-files">
+												<input name="skinali-file-three" class="glass-file" id="skinali-file_three" type="file">
+												<label for="skinali-file-three" class="glass-file-label">Прикрепите файл с чертежом (не обязательно)</label>
+											</div>
+											<div class="calculator-more calculator-skinali-more">
+												<input type="checkbox" id="calculator-skinali-more__four">
+												<label for="calculator-skinali-more__four" class="calculator-more__label">Добавить ещё одно скинали</label>
+											</div>
+										</div>
+										<!-- Three skinali item end-->
+
+										<div class="calculator-skinali-total calculator-total form-subblock">
+											<div class="calculator-skinali-price calculator-price">
+												<span id="calculator-price-skinali" class="calculator-price-text">Итоговая стоимость:</span>
+												<input type="text" value="4490 руб" id="calculator-price-skinali-input" class="calculator-price-input" readonly>
+											</div>
+											<div class="calculator-skinali-summary calculator-summary">
+												Количество скинали: <span id="calculator-skinali-summary__quantity">1</span> шт.,<br> Общая площадь: <span id="calculator-skinali-summary__square">0</span> м2;
+												<br> Итоговый вес: <span id="calculator-skinali-summary__weight">0</span> кг.
+											</div>
+											<button class="btn-two calculator-skinali-btn calculator-btn">
+												Перейти к оформлению
+											</button>										
+										</div>
+										<div class="calculator-skinali-order calculator-order">
+											<span class="form-block">
+												Введите Ваше имя и телефон
+											</span>
+											<div class="calculator-order-inputs form-subblock">
+												<input type="text" name="name" placeholder="Имя" required>
+												<input type="tel" name="phone" placeholder="Телефон" required>
+												<button class="btn-two contacts-order__btn">
+													Оформить
+												</button>
+											</div>
+										</div>
+									</form>
+								</div>
+								<!----------------------- Skinali calculator end ------------------------->
+
+								<!----------------------- Door calculator ------------------------->
+								<div id="calculator-door" class="calculator-common">
+									<form id="calculator-door-form">
+										<input type="radio" id="door_hide" name="form-radio__item_hide" class="form-radio__item_hide">
+
+										<!-- One door item -->
+										<div class="calculator-door-hide calculator-door-hide__one">
+											<div class="calculator-door-sizes calculator-sizes holes">
+												<div class="calculator-door-size calculator-size hole" aria-label="Напишите ширину изделия #1" data-balloon-pos="up">
+													<span>
+														Ширина, <br>мм &nbsp;<i class="fas fa-arrows-alt-h"></i>
+													</span>
+													<input type="number" value="1000" min="200" max="3500" id="door-width_one">
+												</div>
+												<div class="calculator-door-size calculator-size hole" aria-label="Напишите высоту изделия #1" data-balloon-pos="up">
+													<span>
+														Высота, <br>мм &nbsp;<i class="fas fa-arrows-alt-v"></i>
+													</span>
+													<input type="number" value="1000" min="200" max="5000" id="door-height_one">
+												</div>
+												<div class="calculator-door-size calculator-size hole hole_last" aria-label="Напишите толщину изделия #1" data-balloon-pos="up">
+													<span>
+														Толщина, <br>мм &nbsp;<i class="far fa-arrow-to-left"></i>
+													</span>
+													<select name="door-depth_one" id="door-depth_one" class="depth-select depth-select_one">
+														<option value="6">6</option>
+														<option value="8">8</option>
+														<option value="10">10</option>
+														<option value="12">12</option>
+													</select>
+												</div>
+											</div>
+											<div class="calculator-door-types types">
+												<h2 class="form__subtitle">
+													Тип стекла
+												</h1>
+												<div class="calculator-door-types__subtitle calculator-door-types__subtitle_first form-block">
+													<span class="first">Обычное</span>
+													<img src="img/arrow-down.png" alt="arrow-down.png">
+												</div>
+												<div class="calculator-glass-types__content calculator-door-types__content_first">
+													<div class="calculator-door-types__block calculator-door-types__block_first calculator-door-types__block_first_first form-subblock">
+														<span>
+															<input type="radio" id="door-type-regular_one" name="calculator-door-types-first_one" class="door-type-first_one" value="regular" checked>
+															<label for="door-type-regular_one">Обычное</label>
+															<button class="modal-tooltip__type modal-tooltip modal-tooltip_edge">
+																<i class="fas fa-question-circle"></i>
+															</button>
+														</span>
+														<span>
+															<input type="radio" id="door-type-light_one" name="calculator-door-types-first_one" class="door-type-first_one" value="light">
+															<label for="door-type-light_one">Просветленное</label>
+															<button class="modal-tooltip__type modal-tooltip modal-tooltip_edge">
+																<i class="fas fa-question-circle"></i>
+															</button>
+														</span>
+														<span>
+															<input type="radio" id="door-type-mat_one" name="calculator-door-types-first_one" class="door-type-first_one" value="mat">
+															<label for="door-type-mat_one">Матовое/Цветное</label>
+															<button class="modal-tooltip__type_color modal-tooltip modal-tooltip_edge">
+																<i class="fas fa-question-circle"></i>
+															</button>
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="calculator-door-edge calculator-edge">
+												<h2 class="form__subtitle">
+													Кромка:
+												</h2>
+												<div class="calculator-door-edge__subtitle calculator-door-edge__subtitle_one calculator-edge__subtitle form-block">
+													<span class="first">Шлифованная</span>
+													<img src="img/arrow-down.png" alt="arrow-down.png">
+												</div>
+												<div class="calculator-door-edge__content calculator-door-edge__content_one calculator-edge__content calculator-edge__subtitle form-subblock">
+													<span>
+														<input type="radio" id="door-edge-polished_one" name="calculator-door-edge_one" class="door-edge_one" value="0" checked>
+														<label for="door-edge-polished_one">Шлифованная</label>
+														<button class="modal-tooltip__edge_polished modal-tooltip modal-tooltip_edge">
+															<i class="fas fa-question-circle"></i>
+														</button>
+													</span>
+													<span>
+														<input type="radio" id="door-edge-bright_one" name="calculator-door-edge_one" class="door-edge_one" value="300">
+														<label for="door-edge-bright_one">Полированная</label>
+														<button class="modal-tooltip__edge_bright modal-tooltip modal-tooltip_edge">
+															<i class="fas fa-question-circle"></i>
+														</button>
+													</span>
+												</div>
+											</div>
+											<div class="calculator-door-quantity calculator-quantity calculator-holes holes">
+												<div class="hole hole_last">
+													<span>
+														Количество изделий
+													</span>
+													<input type="number" value="1" min="1" id="door-quantity_one" class="door-quantity-input">
+												</div>
+											</div>
+											<div class="calculator-glass-message calculator-message calculator-holes holes">
+												<div class="calculator-glass-hole hole_last">
+													<textarea name="door-textarea_one" class="door-textarea" id="door-textarea_one" placeholder="Ваше примечание к #1"></textarea>
+												</div>
+											</div>
+											<div class="glass-files">
+												<input name="door-file-one" class="glass-file" id="door-file_one" type="file">
+												<label for="door-file-one" class="glass-file-label">Прикрепите файл с чертежом (не обязательно)</label>
+											</div>
+											<div class="calculator-more calculator-door-more">
+												<input type="checkbox" id="calculator-door-more__two">
+												<label for="calculator-door-more__two" class="calculator-more__label">Добавить ещё одну перегородку</label>
+											</div>
+										</div>
+										<!-- One door item end-->
+
+										<!-- Two door item -->
+										<div class="calculator-door-hide calculator-door-hide__two">
+											<div class="calculator-door-sizes calculator-sizes holes">
+												<div class="calculator-door-size calculator-size hole" aria-label="Напишите ширину изделия #2" data-balloon-pos="up">
+													<span>
+														Ширина, <br>мм &nbsp;<i class="fas fa-arrows-alt-h"></i>
+													</span>
+													<input type="number" value="1000" min="200" max="3500" id="door-width_two">
+												</div>
+												<div class="calculator-door-size calculator-size hole" aria-label="Напишите высоту изделия #2" data-balloon-pos="up">
+													<span>
+														Высота, <br>мм &nbsp;<i class="fas fa-arrows-alt-v"></i>
+													</span>
+													<input type="number" value="1000" min="200" max="5000" id="door-height_two">
+												</div>
+												<div class="calculator-door-size calculator-size hole hole_last" aria-label="Напишите толщину изделия #2" data-balloon-pos="up">
+													<span>
+														Толщина, <br>мм &nbsp;<i class="far fa-arrow-to-left"></i>
+													</span>
+													<select name="door-depth_two" id="door-depth_two" class="depth-select depth-select_two">
+														<option value="6">6</option>
+														<option value="8">8</option>
+														<option value="10">10</option>
+														<option value="12">12</option>
+													</select>
+												</div>
+											</div>
+											<div class="calculator-door-types types">
+												<h2 class="form__subtitle">
+													Тип стекла
+												</h1>
+												<div class="calculator-door-types__subtitle calculator-door-types__subtitle_second form-block">
+													<span class="first">Обычное</span>
+													<img src="img/arrow-down.png" alt="arrow-down.png">
+												</div>
+												<div class="calculator-glass-types__content calculator-door-types__content_second">
+													<div class="calculator-door-types__block calculator-door-types__block_first calculator-door-types__block_first_second form-subblock">
+														<span>
+															<input type="radio" id="door-type-regular_two" name="calculator-door-types-first_two" class="door-type-first_two" value="regular" checked>
+															<label for="door-type-regular_two">Обычное</label>
+															<button class="modal-tooltip__type modal-tooltip modal-tooltip_edge">
+																<i class="fas fa-question-circle"></i>
+															</button>
+														</span>
+														<span>
+															<input type="radio" id="door-type-light_two" name="calculator-door-types-first_two" class="door-type-first_two" value="light">
+															<label for="door-type-light_two">Просветленное</label>
+															<button class="modal-tooltip__type modal-tooltip modal-tooltip_edge">
+																<i class="fas fa-question-circle"></i>
+															</button>
+														</span>
+														<span>
+															<input type="radio" id="door-type-mat_two" name="calculator-door-types-first_two" class="door-type-first_two" value="mat">
+															<label for="door-type-mat_two">Матовое/Цветное</label>
+															<button class="modal-tooltip__type_color modal-tooltip modal-tooltip_edge">
+																<i class="fas fa-question-circle"></i>
+															</button>
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="calculator-door-edge calculator-edge">
+												<h2 class="form__subtitle">
+													Кромка:
+												</h2>
+												<div class="calculator-door-edge__subtitle calculator-door-edge__subtitle_two calculator-edge__subtitle form-block">
+													<span class="first">Шлифованная</span>
+													<img src="img/arrow-down.png" alt="arrow-down.png">
+												</div>
+												<div class="calculator-door-edge__content calculator-door-edge__content_two calculator-edge__content calculator-edge__subtitle form-subblock">
+													<span>
+														<input type="radio" id="door-edge-polished_two" name="calculator-door-edge_two" class="door-edge_two" value="0" checked>
+														<label for="door-edge-polished_two">Шлифованная</label>
+														<button class="modal-tooltip__edge_polished modal-tooltip modal-tooltip_edge">
+															<i class="fas fa-question-circle"></i>
+														</button>
+													</span>
+													<span>
+														<input type="radio" id="door-edge-bright_two" name="calculator-door-edge_two" class="door-edge_two" value="300">
+														<label for="door-edge-bright_two">Полированная</label>
+														<button class="modal-tooltip__edge_bright modal-tooltip modal-tooltip_edge">
+															<i class="fas fa-question-circle"></i>
+														</button>
+													</span>
+												</div>
+											</div>
+											<div class="calculator-door-quantity calculator-quantity calculator-holes holes">
+												<div class="hole hole_last">
+													<span>
+														Количество изделий
+													</span>
+													<input type="number" value="1" min="1" id="door-quantity_two" class="door-quantity-input">
+												</div>
+											</div>
+											<div class="calculator-glass-message calculator-message calculator-holes holes">
+												<div class="calculator-glass-hole hole_last">
+													<textarea name="door-textarea_two" class="door-textarea" id="door-textarea_two" placeholder="Ваше примечание к #2"></textarea>
+												</div>
+											</div>
+											<div class="glass-files">
+												<input name="door-file-two" class="glass-file" id="door-file_two" type="file">
+												<label for="door-file-two" class="glass-file-label">Прикрепите файл с чертежом (не обязательно)</label>
+											</div>
+											<div class="calculator-more calculator-door-more">
+												<input type="checkbox" id="calculator-door-more__three">
+												<label for="calculator-door-more__three" class="calculator-more__label">Добавить ещё одну перегородку</label>
+											</div>
+										</div>
+										<!-- Two door item end-->
+
+										<!-- Three door item -->
+										<div class="calculator-door-hide calculator-door-hide__three">
+											<div class="calculator-door-sizes calculator-sizes holes">
+												<div class="calculator-door-size calculator-size hole" aria-label="Напишите ширину изделия #3" data-balloon-pos="up">
+													<span>
+														Ширина, <br>мм &nbsp;<i class="fas fa-arrows-alt-h"></i>
+													</span>
+													<input type="number" value="1000" min="200" max="3500" id="door-width_three">
+												</div>
+												<div class="calculator-door-size calculator-size hole" aria-label="Напишите высоту изделия #3" data-balloon-pos="up">
+													<span>
+														Высота, <br>мм &nbsp;<i class="fas fa-arrows-alt-v"></i>
+													</span>
+													<input type="number" value="1000" min="200" max="5000" id="door-height_three">
+												</div>
+												<div class="calculator-door-size calculator-size hole hole_last" aria-label="Напишите толщину изделия #3" data-balloon-pos="up">
+													<span>
+														Толщина, <br>мм &nbsp;<i class="far fa-arrow-to-left"></i>
+													</span>
+													<select name="door-depth_three" id="door-depth_three" class="depth-select depth-select_three">
+														<option value="6">6</option>
+														<option value="8">8</option>
+														<option value="10">10</option>
+														<option value="12">12</option>
+													</select>
+												</div>
+											</div>
+											<div class="calculator-door-types types">
+												<h2 class="form__subtitle">
+													Тип стекла
+												</h1>
+												<div class="calculator-door-types__subtitle calculator-door-types__subtitle_third form-block">
+													<span class="first">Обычное</span>
+													<img src="img/arrow-down.png" alt="arrow-down.png">
+												</div>
+												<div class="calculator-glass-types__content calculator-door-types__content_third">
+													<div class="calculator-door-types__block calculator-door-types__block_first calculator-door-types__block_first_third form-subblock">
+														<span>
+															<input type="radio" id="door-type-regular_three" name="calculator-door-types-first_three" class="door-type-first_three" value="regular" checked>
+															<label for="door-type-regular_three">Обычное</label>
+															<button class="modal-tooltip__type modal-tooltip modal-tooltip_edge">
+																<i class="fas fa-question-circle"></i>
+															</button>
+														</span>
+														<span>
+															<input type="radio" id="door-type-light_three" name="calculator-door-types-first_three" class="door-type-first_three" value="light">
+															<label for="door-type-light_three">Просветленное</label>
+															<button class="modal-tooltip__type modal-tooltip modal-tooltip_edge">
+																<i class="fas fa-question-circle"></i>
+															</button>
+														</span>
+														<span>
+															<input type="radio" id="door-type-mat_three" name="calculator-door-types-first_three" class="door-type-first_three" value="mat">
+															<label for="door-type-mat_three">Матовое/Цветное</label>
+															<button class="modal-tooltip__type_color modal-tooltip modal-tooltip_edge">
+																<i class="fas fa-question-circle"></i>
+															</button>
+														</span>
+													</div>
+												</div>
+											</div>
+											<div class="calculator-door-edge calculator-edge">
+												<h2 class="form__subtitle">
+													Кромка:
+												</h2>
+												<div class="calculator-door-edge__subtitle calculator-door-edge__subtitle_three calculator-edge__subtitle form-block">
+													<span class="first">Шлифованная</span>
+													<img src="img/arrow-down.png" alt="arrow-down.png">
+												</div>
+												<div class="calculator-door-edge__content calculator-door-edge__content_three calculator-edge__content calculator-edge__subtitle form-subblock">
+													<span>
+														<input type="radio" id="door-edge-polished_three" name="calculator-door-edge_three" class="door-edge_three" value="0" checked>
+														<label for="door-edge-polished_three">Шлифованная</label>
+														<button class="modal-tooltip__edge_polished modal-tooltip modal-tooltip_edge">
+															<i class="fas fa-question-circle"></i>
+														</button>
+													</span>
+													<span>
+														<input type="radio" id="door-edge-bright_three" name="calculator-door-edge_three" class="door-edge_three" value="300">
+														<label for="door-edge-bright_three">Полированная</label>
+														<button class="modal-tooltip__edge_bright modal-tooltip modal-tooltip_edge">
+															<i class="fas fa-question-circle"></i>
+														</button>
+													</span>
+												</div>
+											</div>
+											<div class="calculator-door-quantity calculator-quantity calculator-holes holes">
+												<div class="hole hole_last">
+													<span>
+														Количество изделий
+													</span>
+													<input type="number" value="1" min="1" id="door-quantity_three" class="door-quantity-input">
+												</div>
+											</div>
+											<div class="calculator-glass-message calculator-message calculator-holes holes">
+												<div class="calculator-glass-hole hole_last">
+													<textarea name="door-textarea_three" class="door-textarea" id="door-textarea_three" placeholder="Ваше примечание к #3"></textarea>
+												</div>
+											</div>
+											<div class="glass-files">
+												<input name="door-file-three" class="glass-file" id="door-file_three" type="file">
+												<label for="door-file-three" class="glass-file-label">Прикрепите файл с чертежом (не обязательно)</label>
+											</div>
+											<div class="calculator-more calculator-door-more">
+												<input type="checkbox" id="calculator-door-more__four">
+												<label for="calculator-door-more__four" class="calculator-more__label">Добавить ещё одну перегородку</label>
+											</div>
+										</div>
+										<!-- Three door item end-->
+
+										<div class="calculator-door-total calculator-total form-subblock">
+											<div class="calculator-door-price calculator-price">
+												<span id="calculator-price-door" class="calculator-price-text">Итоговая стоимость:</span>
+												<input type="text" value="4490 руб" id="calculator-price-door-input" class="calculator-price-input" readonly>
+											</div>
+											<div class="calculator-door-summary calculator-summary">
+												Количество перегородок: <span id="calculator-door-summary__quantity">1</span> шт.,<br> Oбщая площадь: <span id="calculator-door-summary__square">0</span> м2; 
+												<br> Итоговый вес: <span id="calculator-door-summary__weight">0</span> кг.
+											</div>
+											<button class="btn-two calculator-door-btn calculator-btn">
+												Перейти к оформлению
+											</button>										
+										</div>
+										<div class="calculator-door-order calculator-order">
+											<span class="form-block">
+												Введите Ваше имя и телефон
+											</span>
+											<div class="calculator-order-inputs form-subblock">
+												<input type="text" name="name" placeholder="Имя" required>
+												<input type="tel" name="phone" placeholder="Телефон" required>
+												<button class="btn-two contacts-order__btn">
+													Оформить
+												</button>
+											</div>
+										</div>
+
+									</form>
+								</div>
+								<!----------------------- Door calculator end ------------------------->
+
+								<!----------------------- Figure calculator ------------------------->
+								<div id="calculator-figure" class="calculator-common">
+									<form id="calculator-figure-form">
+										<input type="radio" id="figure_hide" name="form-radio__item_hide" class="form-radio__item_hide">
+
+										<div class="figure-in-progress">
+											Раздел находится в разработке, но вы можете прикрепить чертеж/эскиз Вашего изделия и отправить нам!
+										</div>
+										<div class="glass-files">
+											<input name="figure-file-one" class="glass-file" id="figure-file_one" type="file">
+											<label for="figure-file-one" class="glass-file-label">Прикрепите файл с чертежом (не обязательно)</label>
+										</div>
+										<div class="calculator-glass-message calculator-figure-message calculator-message calculator-holes holes">
+											<div class="calculator-glass-hole hole_last">
+												<textarea name="figure-textarea_one" class="figure-textarea" id="figure-textarea_one" placeholder="Ваше сообщение"></textarea>
+											</div>
+										</div>
+										<div class="calculator-figure-order calculator-order">
+											<span class="form-block">
+												Введите Ваше имя и телефон
+											</span>
+											<div class="calculator-order-inputs form-subblock">
+												<input type="text" name="name" placeholder="Имя" required>
+												<input type="tel" name="phone" placeholder="Телефон" required>
+												<button class="btn-two contacts-order__btn">
+													Отправить
+												</button>
+											</div>
+										</div>
+									</form>
+								</div>
+								<!----------------------- Figure calculator end ------------------------->
+
+							</div>
+							<h2 class="copyright copyright-secondary animated wow fadeInUp">
+								<a href="contacts.html" class="copyright-link">
+									* Take your time / не торопитесь
+								</a>
+							</h2>
+						</div>
+						<img src="img/hero-img-secondary.png" alt="Photo" class="calculator__img">
+						<img src="img/hands.png" alt="Hands" class="calculator__hands">
+						<a href="contacts.html" class="copyright-secondary__link"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Modal -->
+	<div style="display: none;">
+    	<div class="box-modal depth-modal" id="depth-modal_glass">
+       	 <div class="box-modal_close arcticmodal-close">X</div>
+       		 <h3 class="depth-modal__title">
+       		 	Выберите другую толщину стекла.
+       		 </h3>
+       		 <p class="depth-modal__text">
+       		 	Просветленное стекло доступно только с толщинами 4 мм, 6 мм, 8 мм, 10 мм.
+       		 </p>
+    	</div>
+	</div>
+	<div style="display: none;">
+    	<div class="box-modal depth-modal" id="depth-modal_skinali">
+       	 <div class="box-modal_close arcticmodal-close">X</div>
+       		 <h3 class="depth-modal__title">
+       		 	Выберите другую толщину зеркала.
+       		 </h3>
+       		 <p class="depth-modal__text">
+       		 	Просветленное(закаленное) стекло для зеркала доступно только с толщинами 6 мм, 8 мм, 10 мм.
+       		 </p>
+    	</div>
+	</div>
+	<div style="display: none;">
+    	<div class="box-modal depth-modal" id="depth-modal_door">
+       	 <div class="box-modal_close arcticmodal-close">X</div>
+       		 <h3 class="depth-modal__title">
+       		 	Выберите другую толщину стекла двери.
+       		 </h3>
+       		 <p class="depth-modal__text">
+       		 	Просветленное(закаленное) стекло для перегородок/душевых доступно только с толщинами 6 мм, 8 мм, 10 мм.
+       		 </p>
+    	</div>
+	</div>
+	<div style="display: none;">
+    	<div class="box-modal" id="more-modal">
+       	 <div class="box-modal_close arcticmodal-close">X</div>
+       		 <h3 class="more-modal__title">
+       		 	Напишите нам
+       		 </h3>
+       		 <p class="more-modal__text">
+       		 	Если вам нужно большее количество других типов/размеров изделий -  укажите в поле "Примечание к заказу".
+       		 </p>
+    	</div>
+	</div>
+	<div style="display: none;">
+    	<div class="box-modal depth-modal box-modal-tooltip" id="modal-type">
+       	 <div class="box-modal_close arcticmodal-close">X</div>
+       		 <img src="img/hover-type.png" alt="Тип стекла">
+    	</div>
+	</div>
+	<div style="display: none;">
+    	<div class="box-modal depth-modal box-modal-tooltip" id="modal-type_color">
+       	 <div class="box-modal_close arcticmodal-close">X</div>
+       		 <img src="img/hover-type-math.png" alt="Тип стекла">
+    	</div>
+	</div>
+	<div style="display: none;">
+    	<div class="box-modal depth-modal box-modal-tooltip" id="modal-type_raw">
+       	 <div class="box-modal_close arcticmodal-close">X</div>
+       		 <img src="img/hover-type-raw.png" alt="Тип стекла">
+    	</div>
+	</div>
+	<div style="display: none;">
+    	<div class="box-modal depth-modal box-modal-tooltip" id="modal-type_tempered">
+       	 <div class="box-modal_close arcticmodal-close">X</div>
+       		 <img src="img/hover-type-tempered.png" alt="Тип стекла">
+    	</div>
+	</div>
+	<div style="display: none;">
+    	<div class="box-modal depth-modal box-modal-tooltip" id="modal-edge__raw">
+       	 <div class="box-modal_close arcticmodal-close">X</div>
+       		 <img src="img/hover-edge-raw.png" alt="Кромка">
+    	</div>
+	</div>
+	<div style="display: none;">
+    	<div class="box-modal depth-modal box-modal-tooltip" id="modal-edge__polished">
+       	 <div class="box-modal_close arcticmodal-close">X</div>
+       		 <img src="img/hover-edge-polished.png" alt="Кромка">
+    	</div>
+	</div>
+	<div style="display: none;">
+    	<div class="box-modal depth-modal box-modal-tooltip" id="modal-edge__bright">
+       	 <div class="box-modal_close arcticmodal-close">X</div>
+       		 <img src="img/hover-edge-bright.png" alt="Кромка">
+    	</div>
+	</div>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/jquery.arcticmodal-0.3.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
